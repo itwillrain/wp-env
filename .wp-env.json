@@ -2,7 +2,9 @@
   "plugins": [
     "https://downloads.wordpress.org/plugin/wp-multibyte-patch.2.9.zip"
   ],
-  "themes": [
+  "core": "https://ja.wordpress.org/latest-ja.zip",
+  "theme": [
     "./wp/theme"
-  ]
+  ],
+  "config":  {"WPLANG": "ja"}
 }
