@@ -3,6 +3,6 @@
     "https://downloads.wordpress.org/plugin/wp-multibyte-patch.2.9.zip"
   ],
   "themes": [
-    "./mytheme"
+    "./wp/theme"
   ]
 }
