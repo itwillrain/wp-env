@@ -1,17 +1,21 @@
 {
   "scripts": {
+    "dev": "npm-run-all -p watch:*",
+    "build": "npm-run-all clean-dist dist:wp-theme build:webpack",
+    "watch:webpack": "webpack --watch",
+    "build:webpack": "NODE_ENV=production webpack --mode production",
+    "dist:wp-theme": "cpx \"app/themes/!(twenty*)/**/*.!(log)\" dist/",
     "wp-env": "wp-env",
-    "wp-env:start": "wp-env start",
+    "wp-env:start": "COMPOSE_PROJECT_NAME=my-project wp-env start",
     "wp-env:stop": "wp-env stop",
-    "wp-env:update": "wp-env start --update",
+    "wp-env:update": "COMPOSE_PROJECT_NAME=my-project wp-env start --update",
     "wp-env:cli": "wp-env run cli wp",
+    "wp-env:logs": "wp-env logs",
+    "wp-env:setup": "ts-node scripts/wp-setup.ts",
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc",
-    "fix": "gts fix",
-    "prepare": "yarn run compile",
-    "pretest": "yarn run compile",
-    "posttest": "yarn run lint"
+    "fix": "gts fix"
   },
   "name": "wp-env",
   "version": "1.0.0",
@@ -35,6 +39,7 @@
     "gts": "^3.1.0",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
+    "ts-node": "^10.1.0",
     "typescript": "^4.0.3"
   }
 }
