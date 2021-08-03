@@ -1,7 +1,7 @@
 {
   "scripts": {
     "wp-env": "wp-env",
-    "wp-env:start": "wp-env strat",
+    "wp-env:start": "wp-env start",
     "wp-env:stop": "wp-env stop",
     "wp-env:update": "wp-env start --update",
     "wp-env:cli": "wp-env run cli wp",
