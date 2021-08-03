@@ -5,9 +5,7 @@
    ],
   "phpVersion": null,
   "core": "https://ja.wordpress.org/latest-ja.zip",
-  "themes": [
-    "./app/theme"
-  ],
+  "themes": ["./app/themes/my-theme"],
   "mappings": {
     "wp-content/plugins": "./app/plugins"
   },
